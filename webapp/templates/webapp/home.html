@@ -1,0 +1,16 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+    Welcome to the homepage.
+    {% include "webapp/includes/htmlsnippets.html" %}
+  <h2> Import Adjacency Maxtrix File</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+
+  <p>Return to home  :  <a href='/data/'>check data</a></p>
+  <p>Read Uploaded file  :  <a href='/readfile/'>read file</a></p>
+  <p>{{ FSTR }}</p>
+{% endblock %}
