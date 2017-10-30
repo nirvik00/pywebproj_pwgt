@@ -2,7 +2,6 @@
   <head>
     {% load staticfiles %}
       <script>
-      //document.write("function object data:\n");
       var adj_data ={{adj_data | safe}};
       var func_data ={{func_data | safe}};
       var arr=[];
@@ -11,21 +10,17 @@
       for(var i=0; i<adj_data.length; i++){
           if(adj_data[i].length>0){
               var x=adj_data[i];
-              //document.write("<br>adj data : "+x);
-              //console.log(x);
               adj.push(x);
           }
       }
       for(var i=0; i<func_data.length; i++){
           if(func_data[i].length>0){
               var x=func_data[i];
-              //document.write("<br>func data : "+x+"-"+typeof(x));
-              //console.log(x);
               obj.push(x);
           }
       }
       console.log(adj);
-      //console.log(obj);
+      console.log(obj);
       </script>
     <script language="javascript" type="text/javascript" src="{% static 'webapp/solver/libraries/p5.js' %}"></script>
     <script language="javascript" type="text/javascript" src="{% static 'webapp/solver/CellObjClass.js' %}"></script>
